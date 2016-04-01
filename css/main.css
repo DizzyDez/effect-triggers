@@ -35,6 +35,13 @@ div {
 
   background-color: limegreen;
   opacity: 0;
+  animation: fade 1s linear;
+  transition:
+    opacity .3s ease-out;
+}
+
+.showbox {
+  opacity: 100;
 }
 
 .diamond {
