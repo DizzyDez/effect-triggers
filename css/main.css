@@ -52,6 +52,11 @@ div {
 
   background-color: hotpink;
   transform: rotate(45deg);
+  transition: all .3s linear;
+}
+
+.slide {
+  right: 50px;
 }
 
 .panel {
@@ -62,9 +67,14 @@ div {
 
   background-color: yellow;
   transform: translateY(-50%);
+  transition: all .3s linear;
 
   color: darkgoldenrod;
   text-align: center;
+}
+
+.collapse {
+  max-height: 0;
 }
 
 .panel h2 {
@@ -75,10 +85,15 @@ div {
 .circle {
   height: 100px;
   top: calc(50% - 50px);
+  right: 50px;
   width: 100px;
 
   background-color: orange;
   border-radius: 50%;
+}
+
+.bounce {
+  animation: bounce .7s ease-in;
 }
 
 .list {
@@ -103,6 +118,36 @@ div {
   background-color: plum;
   border: 1px solid mediumpurple;
   overflow: hidden;
+  animation: expand .3s forwards ease-out;
 
   color: mediumpurple;
+}
+
+
+
+@keyframes bounce {
+    0% {
+      top: 0;
+    }
+    30% {
+      top: 40px;
+      right: 70px;
+    }
+    60% {
+      top: 0;
+      right: 100px;
+    }
+    100% {
+      top: 50px;
+      right: 130px;
+    }
+  }
+
+@keyframes expand {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1.7em;
+  }
 }
